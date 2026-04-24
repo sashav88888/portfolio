@@ -42,24 +42,14 @@
     }
     </script>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MWV0Y8P23L"></script>
     <script>
-      // Google Analytics включится только после установки реального Measurement ID.
-      (function initAnalytics() {
-        var GA_MEASUREMENT_ID = "G-MWV0Y8P23L"; // Пример: G-XXXXXXXXXX
-        if (!GA_MEASUREMENT_ID) return;
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { window.dataLayer.push(arguments); }
-        window.gtag = gtag;
-
-        gtag('js', new Date());
-        gtag('config', GA_MEASUREMENT_ID);
-
-        var gaScript = document.createElement('script');
-        gaScript.async = true;
-        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA_MEASUREMENT_ID);
-        document.head.appendChild(gaScript);
-      })();
+      gtag('config', 'G-MWV0Y8P23L');
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
