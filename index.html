@@ -25,7 +25,6 @@
     <meta name="twitter:image" content="https://sashav88888.github.io/portfolio/photo/brow-master-photo.webp">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
-    <link rel="preload" as="image" href="./photo/brow-master-photo.webp" type="image/webp">
 
     <script type="application/ld+json">
     {
@@ -196,25 +195,6 @@
             overflow: hidden;
         }
 
-        .reading-progress {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            z-index: 240;
-            background: transparent;
-        }
-
-        .reading-progress-bar {
-            width: 0;
-            height: 100%;
-            background: linear-gradient(90deg, var(--accent) 0%, #f4d6a2 100%);
-            box-shadow: 0 0 22px rgba(201, 169, 110, 0.45);
-            transform-origin: left;
-            transition: width 0.08s linear;
-        }
-
 
         .nav.scrolled {
             background: linear-gradient(180deg, rgba(14, 13, 12, 0.78) 0%, rgba(12, 11, 10, 0.56) 100%);
@@ -378,23 +358,6 @@
             color: var(--text-secondary);
             margin-bottom: 2.5rem;
             line-height: 1.7;
-        }
-
-        .hero-proof {
-            margin-bottom: 2rem;
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-
-        .hero-proof-item {
-            padding: 0.5rem 0.875rem;
-            border: 1px solid var(--border);
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.012);
-            color: var(--text-secondary);
-            font-size: 0.8125rem;
-            line-height: 1.2;
         }
 
         .hero-actions {
@@ -1111,36 +1074,6 @@
             line-height: 1.6;
         }
 
-        .case-facts {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 0.75rem;
-        }
-
-        .case-fact {
-            padding: 0.875rem;
-            border: 1px solid var(--border);
-            background: rgba(255, 255, 255, 0.012);
-            border-radius: var(--radius);
-        }
-
-        .case-fact-label {
-            display: block;
-            font-family: var(--font-display);
-            font-size: 0.6875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--accent);
-            margin-bottom: 0.375rem;
-        }
-
-        .case-fact-value {
-            display: block;
-            font-size: 0.8125rem;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-
         .project-stack {
             display: flex;
             gap: 0.625rem;
@@ -1192,9 +1125,6 @@
             .project-visual {
                 aspect-ratio: 16/10;
             }
-            .case-facts {
-                grid-template-columns: 1fr;
-            }
         }
 
         /* ============================================================
@@ -1202,7 +1132,7 @@
         ============================================================ */
         .process-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             gap: 1.5rem;
             position: relative;
             margin-bottom: 3rem;
@@ -1316,75 +1246,6 @@
                 gap: 2rem;
             }
             .includes-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* ============================================================
-           TRUST
-        ============================================================ */
-        .trust {
-            padding-top: 0;
-        }
-
-        .trust-wrap {
-            border: 1px solid var(--border);
-            background: var(--surface);
-            border-radius: var(--radius);
-            padding: clamp(1.5rem, 4vw, 2.25rem);
-        }
-
-        .trust-metrics {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .trust-metric {
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.015);
-        }
-
-        .trust-value {
-            display: block;
-            font-family: var(--font-display);
-            font-size: 1.625rem;
-            color: var(--text);
-            margin-bottom: 0.25rem;
-            letter-spacing: -0.02em;
-        }
-
-        .trust-label {
-            font-size: 0.8125rem;
-            color: var(--text-muted);
-        }
-
-        .trust-quote {
-            border-left: 2px solid var(--accent);
-            padding-left: 1rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            font-size: 0.9375rem;
-        }
-
-        .trust-quote strong {
-            color: var(--text);
-            font-family: var(--font-display);
-            font-size: 0.875rem;
-            letter-spacing: 0.02em;
-        }
-
-        @media (max-width: 900px) {
-            .trust-metrics {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-        }
-
-        @media (max-width: 640px) {
-            .trust-metrics {
                 grid-template-columns: 1fr;
             }
         }
@@ -1573,40 +1434,6 @@
                 gap: 1rem;
                 text-align: center;
             }
-            .contact {
-                padding-bottom: 7rem;
-            }
-        }
-
-        .mobile-cta {
-            display: none;
-        }
-
-        @media (max-width: 640px) {
-            .mobile-cta {
-                position: fixed;
-                left: 0.75rem;
-                right: 0.75rem;
-                bottom: 0.75rem;
-                z-index: 160;
-                padding: 0.5rem;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 0.5rem;
-                border: 1px solid var(--border-hover);
-                background: rgba(14, 13, 12, 0.88);
-                backdrop-filter: blur(14px);
-                -webkit-backdrop-filter: blur(14px);
-                border-radius: calc(var(--radius) + 8px);
-            }
-
-            .mobile-cta .btn {
-                justify-content: center;
-                width: 100%;
-                min-height: 44px;
-                padding: 0.7rem 0.9rem;
-                font-size: 0.8125rem;
-            }
         }
 
         /* ============================================================
@@ -1646,10 +1473,6 @@
             .reveal {
                 opacity: 1;
                 transform: none;
-                transition: none;
-            }
-
-            .reading-progress-bar {
                 transition: none;
             }
         }
@@ -1777,10 +1600,6 @@
 </head>
 <body>
 
-    <div class="reading-progress" aria-hidden="true">
-        <div class="reading-progress-bar" id="readingProgressBar"></div>
-    </div>
-
     <!-- Navigation -->
     <nav class="nav" id="nav">
         <div class="container nav-inner">
@@ -1802,22 +1621,17 @@
                 Доступен для проектов
             </div>
             <h1 class="hero-title text-xl reveal reveal-delay-1">
-                <span class="name">Сайты, которые помогают вам зарабатывать</span>
-                <span class="role">Я Александр, frontend-разработчик: проектирую и собираю быстрые интерфейсы для бизнеса и экспертов</span>
+                <span class="name">Александр</span>
+                <span class="role">Frontend-разработчик для малого бизнеса и специалистов</span>
             </h1>
             <p class="hero-desc reveal reveal-delay-2">
-                Фокус на результате: понятная структура, сильные CTA, высокая скорость
-                и аккуратная мобильная версия. От лендингов до многостраничных решений
-                с приоритетом на конверсию и удобство пользователя.
+                Создаю аккуратные, быстрые и продуманные сайты. От лендингов
+                до многостраничных решений — с фокусом на детали, скорость
+                загрузки и измеримый результат для вашего бизнеса.
             </p>
-            <div class="hero-proof reveal reveal-delay-2">
-                <span class="hero-proof-item">LCP-first подход</span>
-                <span class="hero-proof-item">Mobile-first верстка</span>
-                <span class="hero-proof-item">Прозрачные этапы и сроки</span>
-            </div>
             <div class="hero-actions reveal reveal-delay-3">
-                <a href="#works" class="btn btn-primary">Смотреть проекты</a>
-                <a href="#contact" class="btn btn-secondary">Связаться</a>
+                <a href="#contact" class="btn btn-primary">Обсудить проект</a>
+                <a href="#works" class="btn btn-secondary">Посмотреть работы</a>
             </div>
             <div class="hero-meta-bar reveal reveal-delay-3">
                 <div class="hero-meta-item">
@@ -1970,7 +1784,7 @@
             <article class="project reveal" data-project="1">
                 <div class="project-visual" onclick="openPanel(1)">
                     <div class="project-visual-inner">
-                        <img class="project-shot" src="./photo/brow-master-photo.webp" alt="Скриншот главного экрана лендинга для мастера бровей" loading="eager" fetchpriority="high" decoding="async" width="1200" height="900" sizes="(max-width: 768px) 100vw, 50vw">
+                        <img class="project-shot" src="./photo/brow-master-photo.webp" alt="Скриншот главного экрана лендинга для мастера бровей" loading="lazy" decoding="async">
                     </div>
                     <div class="project-visual-overlay">
                         <span>Открыть кейс</span>
@@ -1984,12 +1798,6 @@
                     </div>
                     <span class="project-number">01 / Лендинг</span>
                     <h3 class="project-title">Сайт для мастера бровей</h3>
-                    <div class="case-facts">
-                        <div class="case-fact"><span class="case-fact-label">Задача</span><span class="case-fact-value">Собрать лендинг, который быстро переводит посетителя в запись.</span></div>
-                        <div class="case-fact"><span class="case-fact-label">Роль</span><span class="case-fact-value">UX-структура, визуал, верстка, интерактив.</span></div>
-                        <div class="case-fact"><span class="case-fact-label">Стек</span><span class="case-fact-value">HTML5, CSS3, JavaScript, адаптив.</span></div>
-                        <div class="case-fact"><span class="case-fact-label">Результат</span><span class="case-fact-value">3 ключевых шага до заявки: оффер, услуги, CTA в Telegram.</span></div>
-                    </div>
                     <p class="project-desc">
                         Мягкий и аккуратный лендинг для мастера перманентного макияжа
                         и ламинирования ресниц. Спокойная подача с акцентом на стерильность,
@@ -2018,7 +1826,7 @@
             <article class="project reveal" data-project="2">
                 <div class="project-visual" onclick="openPanel(2)">
                     <div class="project-visual-inner">
-                        <img class="project-shot" src="./photo/psychologist-photo.webp" alt="Скриншот главного экрана сайта психолога" loading="lazy" decoding="async" width="1200" height="900" sizes="(max-width: 768px) 100vw, 50vw">
+                        <img class="project-shot" src="./photo/psychologist-photo.webp" alt="Скриншот главного экрана сайта психолога" loading="lazy" decoding="async">
                     </div>
                     <div class="project-visual-overlay">
                         <span>Открыть кейс</span>
@@ -2032,12 +1840,6 @@
                     </div>
                     <span class="project-number">02 / Лендинг</span>
                     <h3 class="project-title">Сайт для психолога</h3>
-                    <div class="case-facts">
-                        <div class="case-fact"><span class="case-fact-label">Задача</span><span class="case-fact-value">Снизить тревогу пользователя перед первым обращением.</span></div>
-                        <div class="case-fact"><span class="case-fact-label">Роль</span><span class="case-fact-value">Инфо-архитектура, визуальная иерархия, UI-реализация.</span></div>
-                        <div class="case-fact"><span class="case-fact-label">Стек</span><span class="case-fact-value">HTML5, CSS3, JavaScript, CSS-анимации.</span></div>
-                        <div class="case-fact"><span class="case-fact-label">Результат</span><span class="case-fact-value">4 сценария контакта: запросы, формат, FAQ, быстрый мессенджер-CTA.</span></div>
-                    </div>
                     <p class="project-desc">
                         Лендинг для частной психологической практики в Санкт-Петербурге.
                         Спокойная и конфиденциальная подача: запросы, форматы работы,
@@ -2066,7 +1868,7 @@
             <article class="project reveal" data-project="3">
                 <div class="project-visual" onclick="openPanel(3)">
                     <div class="project-visual-inner">
-                        <img class="project-shot" src="./photo/clean-city-photo.webp" alt="Скриншот главного экрана экоплатформы ЧистыйГород" loading="lazy" decoding="async" width="1200" height="900" sizes="(max-width: 768px) 100vw, 50vw">
+                        <img class="project-shot" src="./photo/clean-city-photo.webp" alt="Скриншот главного экрана экоплатформы ЧистыйГород" loading="lazy" decoding="async">
                     </div>
                     <div class="project-visual-overlay">
                         <span>Открыть кейс</span>
@@ -2080,12 +1882,6 @@
                     </div>
                     <span class="project-number">03 / Экоплатформа</span>
                     <h3 class="project-title">Экоплатформа «ЧистыйГород»</h3>
-                    <div class="case-facts">
-                        <div class="case-fact"><span class="case-fact-label">Задача</span><span class="case-fact-value">Сделать понятный интерфейс гражданской активности и отчётности.</span></div>
-                        <div class="case-fact"><span class="case-fact-label">Роль</span><span class="case-fact-value">Прототип сценариев, верстка страниц, UI-логика.</span></div>
-                        <div class="case-fact"><span class="case-fact-label">Стек</span><span class="case-fact-value">HTML5, CSS3, JavaScript, модульная структура.</span></div>
-                        <div class="case-fact"><span class="case-fact-label">Результат</span><span class="case-fact-value">2 главных цикла: найти точку и отправить отчёт с фото до/после.</span></div>
-                    </div>
                     <p class="project-desc">
                         Интерфейс цифровой экоплатформы для координации городской активности.
                         Карта загрязнённых точек, сценарий создания отчёта, фото до/после,
@@ -2114,7 +1910,7 @@
             <article class="project reveal" data-project="4">
                 <div class="project-visual" onclick="openPanel(4)">
                     <div class="project-visual-inner">
-                        <img class="project-shot" src="./photo/fitness-photo.webp" alt="Скриншот главного экрана сайта фитнес-тренера" loading="lazy" decoding="async" width="1200" height="900" sizes="(max-width: 768px) 100vw, 50vw">
+                        <img class="project-shot" src="./photo/fitness-photo.webp" alt="Скриншот главного экрана сайта фитнес-тренера" loading="lazy" decoding="async">
                     </div>
                     <div class="project-visual-overlay">
                         <span>Открыть кейс</span>
@@ -2128,12 +1924,6 @@
                     </div>
                     <span class="project-number">04 / Многостраничный</span>
                     <h3 class="project-title">Сайт фитнес-тренера</h3>
-                    <div class="case-facts">
-                        <div class="case-fact"><span class="case-fact-label">Задача</span><span class="case-fact-value">Упаковать услуги тренера в сильную продающую структуру.</span></div>
-                        <div class="case-fact"><span class="case-fact-label">Роль</span><span class="case-fact-value">Концепция, верстка, анимационный слой, адаптив.</span></div>
-                        <div class="case-fact"><span class="case-fact-label">Стек</span><span class="case-fact-value">HTML5, CSS3, JavaScript, Canvas.</span></div>
-                        <div class="case-fact"><span class="case-fact-label">Результат</span><span class="case-fact-value">3 фокуса конверсии: программа, кейсы клиентов, запись на сопровождение.</span></div>
-                    </div>
                     <p class="project-desc">
                         Насыщенный сайт персонального тренера из Тюмени. Направления: похудение,
                         набор массы, подготовка к соревнованиям, реабилитация. Блоки программ,
@@ -2170,23 +1960,28 @@
             <div class="process-grid reveal" id="processGrid">
                 <div class="process-step">
                     <div class="process-number">01</div>
-                    <h3 class="process-title">Discover</h3>
-                    <p class="process-desc">Погружаюсь в продукт, аудиторию и цели, чтобы зафиксировать ключевой сценарий конверсии.</p>
+                    <h3 class="process-title">Обсуждение</h3>
+                    <p class="process-desc">Узнаю о вашем бизнесе, целях и аудитории. Понимаю, какой результат нужен.</p>
                 </div>
                 <div class="process-step">
                     <div class="process-number">02</div>
-                    <h3 class="process-title">Design</h3>
-                    <p class="process-desc">Формирую структуру экранов, контентную иерархию и визуальные правила дизайн-системы.</p>
+                    <h3 class="process-title">Оценка</h3>
+                    <p class="process-desc">Прозрачная смета и чёткие сроки. Без скрытых платежей и неожиданностей.</p>
                 </div>
                 <div class="process-step">
                     <div class="process-number">03</div>
-                    <h3 class="process-title">Develop</h3>
-                    <p class="process-desc">Собираю быстрый и адаптивный фронтенд с чистым кодом и предсказуемыми компонентами.</p>
+                    <h3 class="process-title">Разработка</h3>
+                    <p class="process-desc">Чистый код, pixel-perfect вёрстка, адаптивность и кроссбраузерность.</p>
                 </div>
                 <div class="process-step">
                     <div class="process-number">04</div>
-                    <h3 class="process-title">Optimize</h3>
-                    <p class="process-desc">Довожу performance и UX: WebP, lazy load, micro-interactions и финальный контроль качества.</p>
+                    <h3 class="process-title">Правки</h3>
+                    <p class="process-desc">До трёх итераций корректировок. Вношу изменения до полного соответствия.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">05</div>
+                    <h3 class="process-title">Запуск</h3>
+                    <p class="process-desc">Помогаю с размещением. Сайт готов принимать клиентов.</p>
                 </div>
             </div>
 
@@ -2210,37 +2005,6 @@
                         <div class="includes-item-desc">Семантическая вёрстка, мета-теги и оптимизация скорости</div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust -->
-    <section class="trust">
-        <div class="container">
-            <div class="trust-wrap reveal">
-                <div class="trust-metrics">
-                    <div class="trust-metric">
-                        <span class="trust-value">4+</span>
-                        <span class="trust-label">Полноценных проекта в портфолио</span>
-                    </div>
-                    <div class="trust-metric">
-                        <span class="trust-value">100%</span>
-                        <span class="trust-label">Mobile-first проверка перед релизом</span>
-                    </div>
-                    <div class="trust-metric">
-                        <span class="trust-value">24ч</span>
-                        <span class="trust-label">Обычно отвечаю на запросы</span>
-                    </div>
-                    <div class="trust-metric">
-                        <span class="trust-value">3 этапа</span>
-                        <span class="trust-label">Контроля качества: UI, UX, скорость</span>
-                    </div>
-                </div>
-                <p class="trust-quote">
-                    «Сайт получился аккуратным и очень понятным для клиентов. Были чёткие этапы,
-                    вовремя показывались промежуточные результаты и быстро вносились правки.»<br>
-                    <strong>— отзыв заказчика из сферы услуг</strong>
-                </p>
             </div>
         </div>
     </section>
@@ -2336,16 +2100,11 @@
         <div class="panel-body" id="panelBody"></div>
     </div>
 
-    <div class="mobile-cta" aria-label="Быстрая связь">
-        <a href="https://t.me/stxrsx" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Telegram</a>
-        <a href="mailto:fxdinqstxrs@gmail.com" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Email</a>
-    </div>
-
     <script>
         // ==================== NAV SCROLL & ACTIVE STATE ====================
         const nav = document.getElementById('nav');
         const navLinks = document.querySelectorAll('.nav-link');
-        const progressBar = document.getElementById('readingProgressBar');
+        let lastScroll = 0;
 
         window.addEventListener('scroll', () => {
             const current = window.pageYOffset;
@@ -2354,12 +2113,7 @@
             } else {
                 nav.classList.remove('scrolled');
             }
-
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const progress = docHeight > 0 ? (current / docHeight) * 100 : 0;
-            if (progressBar) {
-                progressBar.style.width = `${Math.min(progress, 100)}%`;
-            }
+            lastScroll = current;
         });
 
         const sections = document.querySelectorAll('section[id]');
@@ -2377,7 +2131,6 @@
         sections.forEach(sec => navObserver.observe(sec));
         // ==================== SCROLL REVEAL ====================
         const revealElements = document.querySelectorAll('.reveal');
-        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -2513,13 +2266,10 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
-
-        // Initialize progress bar for first paint state.
-        window.dispatchEvent(new Event('scroll'));
     </script>
 </body>
 </html>
